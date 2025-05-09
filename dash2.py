@@ -8,7 +8,8 @@ st.write("Upload a `.tsv` file and we'll tell you the HSC fate and lineage bias.
 uploaded_file = st.file_uploader("Upload your `.tsv` file here", type=["tsv"])
 
 # Replace IP since we're not running it locally
-backend_url = "https://f3d3-72-134-229-228.ngrok-free.app"
+#backend_url = "https://f3d3-72-134-229-228.ngrok-free.app"
+backend_url = "http://localhost:8080/predict"
 
 if uploaded_file is not None:
     if st.button("Run Prediction"):
